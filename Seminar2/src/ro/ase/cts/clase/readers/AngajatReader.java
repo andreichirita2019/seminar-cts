@@ -9,14 +9,16 @@ import java.util.Scanner;
 import ro.ase.cts.clase.Angajat;
 import ro.ase.cts.clase.Aplicant;
 
-public class AngajatReader {
+public class AngajatReader extends AplicantReader {
 	
 	//returneaza o lista de angajati
 	//List - este abstract
 	//ArrayList - este concret
 	
-	public static List<Aplicant> readAngajati(String file) throws FileNotFoundException {
-		Scanner input2 = new Scanner(new File(file));
+	
+	
+	public List<Aplicant> readAplicanti() throws FileNotFoundException {
+		Scanner input2 = new Scanner(new File(super.fileName));
 		input2.useDelimiter(",");
 		List<Aplicant> angajati = new ArrayList<Aplicant>();
 
@@ -36,6 +38,11 @@ public class AngajatReader {
 		}
 		input2.close();
 		return angajati;
+	}
+
+	public AngajatReader(String fileName) {
+		super(fileName);
+		// TODO Auto-generated constructor stub
 	}
 
 }
