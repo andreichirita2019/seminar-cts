@@ -59,8 +59,17 @@ public abstract class Aplicant{
 	public int getNr_proiecte() {
 		return nr_proiecte;
 	}
-	public void setNr_proiecte(int nr_proiecte) {
+	
+	public void setDenumiriProiecte(int nr_proiecte, String[] denumire_proiecte) { //lasam shallow-copy, dar noi nu stergem acel vector -- zona de memorie ramane pentru acest atribut
 		this.nr_proiecte = nr_proiecte;
+		this.denumireProiect =  denumire_proiecte;
 	}
+	
+	
+	public String[] getDenumireProiect() {
+		return denumireProiect;
+	}
+	
+	public abstract int getFinantare();
 
 }

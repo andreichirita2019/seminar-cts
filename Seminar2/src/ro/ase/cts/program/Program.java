@@ -23,7 +23,7 @@ public class Program {
 		//!!UPDATEE - PUTEM da un singur parametru, dar trebuie clasa abstracta
 		//!!!UPDATE - 
 		//trebuie sa punem al doilea parametru de tipul AplicantReader
-		return reader.readAplicanti();
+		return reader.readAplicanti(); //apelam o metoda
 		//nu trebuie declarata ci putem returna direct
 	}
 
@@ -33,7 +33,10 @@ public class Program {
 		try {
 			listaAngajati = citesteAplicanti(new AngajatReader("angajati.txt"));
 			for(Aplicant angajat:listaAngajati)
+			{
 				System.out.println(angajat.toString());
+				System.out.println("Angajatul are finantarea: " + angajat.getFinantare());
+			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
