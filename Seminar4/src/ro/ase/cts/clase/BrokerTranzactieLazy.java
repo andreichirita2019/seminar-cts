@@ -49,7 +49,9 @@ public class BrokerTranzactieLazy {
 		return builder.toString();
 	}
 	
-	public static BrokerTranzactieLazy getInstanta(String nume, int vechime, int nrTranzactiiEfectuate) {
+	//punem synchronized -- nu o sa am sansa sa apelez acelasi constructor de doua ori pe doua fire de executie
+	//thread safe 
+	public static synchronized BrokerTranzactieLazy getInstanta(String nume, int vechime, int nrTranzactiiEfectuate) {
 		if (broker == null) {
 			broker = new BrokerTranzactieLazy (nume, vechime, nrTranzactiiEfectuate);
 		}
