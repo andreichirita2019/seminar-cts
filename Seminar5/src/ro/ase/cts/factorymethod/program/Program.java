@@ -14,6 +14,7 @@ public class Program {
 		
 		//Dependency inversion - conexiune doar cu tipurile abstracte
 		//eu cand il apelez ii dau un tip concret
+		//dezavantaj - multe clase
 		
 		PersonalSpital factoryPersonal = fabrica.getPersonal(nume);
 		System.out.println(factoryPersonal.toString());
