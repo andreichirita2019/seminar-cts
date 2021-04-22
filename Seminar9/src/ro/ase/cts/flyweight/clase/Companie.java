@@ -6,11 +6,11 @@ public class Companie implements Flyweight{
 	private String nrTelefonCompanie;
 	private String CUI;
 	
-	public Companie(String numeCompanie, String nrTelefonCompanie, String cUI) {
+	public Companie(String numeCompanie, String nrTelefonCompanie, String CUI) {
 		super();
 		this.numeCompanie = numeCompanie;
 		this.nrTelefonCompanie = nrTelefonCompanie;
-		CUI = cUI;
+		this.CUI = CUI;
 	}
 
 	@Override
@@ -24,6 +24,7 @@ public class Companie implements Flyweight{
 		builder.append(CUI);
 		builder.append("]");
 		return builder.toString();
+		
 	}
 
 	@Override
